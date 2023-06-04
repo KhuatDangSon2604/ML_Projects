@@ -1,0 +1,6 @@
+flask
+joblib
+opencv-python
+PyWavelets
+scikit-learn
+mtcnn
