@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import base64
 import cv2
-from mtcnn import MTCNN
+# from mtcnn import MTCNN
 from wavelet import w2d
 
 __class_name_to_number = {}
@@ -83,23 +83,23 @@ def get_face_haar(image_path, image_base64_data):
 
     return cropped_faces
 
-def get_face_mtcnn(image_path, image_base64_data):
-    face_detector = MTCNN()
-    if image_path:
-        img = cv2.imread(image_path)
-    else:
-        img = getb64_string(image_base64_data)
-    rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    faces = face_detector.detect_faces(rgb)
+# def get_face_mtcnn(image_path, image_base64_data):
+#     face_detector = MTCNN()
+#     if image_path:
+#         img = cv2.imread(image_path)
+#     else:
+#         img = getb64_string(image_base64_data)
+#     rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+#     faces = face_detector.detect_faces(rgb)
 
-    cropped_faces = []
+#     cropped_faces = []
 
-    for result in faces:
-        x, y, w, h = result['box']
-        roi_color = img[y:y+h, x:x+w]
-        cropped_faces.append(roi_color)
+#     for result in faces:
+#         x, y, w, h = result['box']
+#         roi_color = img[y:y+h, x:x+w]
+#         cropped_faces.append(roi_color)
 
-    return cropped_faces
+#     return cropped_faces
 
 if __name__ == "__main__":
     load_server_artifacts()
