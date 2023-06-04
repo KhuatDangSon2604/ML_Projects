@@ -3,4 +3,5 @@ joblib
 opencv-python
 PyWavelets
 scikit-learn
+tensorflow
 mtcnn
