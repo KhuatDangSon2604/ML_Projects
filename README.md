@@ -2,15 +2,15 @@
 > Đây là dự án cuối kỳ đối với môn học "Học máy". Tên đề tài được chọn là "Ứng dụng học máy trong việc nhận diện khuôn mặt".
 ___
 ## Thành viên nhóm:
-Khuất Đăng Sơn 20002159 (<b>C</b>)
+Khuất Đăng Sơn 20002159 (<b>C</b>) ([github_link](https://github.com/Thefuckingdead))
 
-Nguyễn Thị Thanh 20002164
+Nguyễn Thị Thanh 20002164 ([github_link](https://github.com/NguyenThiThanhNguSi))
 
-Trần Thiên Cường 20002109
+Trần Thiên Cường 20002109 ([github_link](https://github.com/TranThienCuong))
 
-Luyện Thị Quyên 20002158
+Luyện Thị Quyên 20002158 ([github_link](https://github.com/LuyenQuyen))
 
-Nguyễn Trọng Trưởng 20002172
+Nguyễn Trọng Trưởng 20002172 ([github_link](https://github.com/NguyenTrongTruong))
 ___
 ## Cấu trúc các thư mục
 Trong cả thư mục lớn này bao gồm thư mục nhỏ, mỗi thư mục nhỏ lại tương đương việc giải quyết 1 bài toán trong việc phân loại hình ảnh. Các bài toán được chọn bao gồm 3 bài toán: **Nhận diện gương mặt sinh viên**, **Nhận diện cảm xúc**, **Nhận diện người nổi tiếng (Format theo kiểu What you look like?)**. Trong đó:
