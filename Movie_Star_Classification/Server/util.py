@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import base64
 import cv2
-# from mtcnn import MTCNN
+from mtcnn import MTCNN
 from wavelet import w2d
 
 __class_name_to_number = {}
@@ -12,6 +12,7 @@ __class_number_to_name = {}
 __model = None
 
 def classify_image(image_base64_data, file_path = None):
+    # You can change to get_face_mtcnn() function to use different model
     imgs = get_face_haar(file_path, image_base64_data)
 
     result = []
@@ -54,7 +55,7 @@ def load_server_artifacts():
 def class_number_to_name(class_num):
     return __class_number_to_name[class_num]
 
-
+# Get base64 string format from image
 def getb64_string(b64str):
     '''
         Reference: https://stackoverflow.com/questions/33754935/read-a-base-64-encoded-image-from-memory-using-opencv-python-library
@@ -83,23 +84,23 @@ def get_face_haar(image_path, image_base64_data):
 
     return cropped_faces
 
-# def get_face_mtcnn(image_path, image_base64_data):
-#     face_detector = MTCNN()
-#     if image_path:
-#         img = cv2.imread(image_path)
-#     else:
-#         img = getb64_string(image_base64_data)
-#     rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-#     faces = face_detector.detect_faces(rgb)
+def get_face_mtcnn(image_path, image_base64_data):
+    face_detector = MTCNN()
+    if image_path:
+        img = cv2.imread(image_path)
+    else:
+        img = getb64_string(image_base64_data)
+    rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    faces = face_detector.detect_faces(rgb)
 
-#     cropped_faces = []
+    cropped_faces = []
 
-#     for result in faces:
-#         x, y, w, h = result['box']
-#         roi_color = img[y:y+h, x:x+w]
-#         cropped_faces.append(roi_color)
+    for result in faces:
+        x, y, w, h = result['box']
+        roi_color = img[y:y+h, x:x+w]
+        cropped_faces.append(roi_color)
 
-#     return cropped_faces
+    return cropped_faces
 
 if __name__ == "__main__":
     load_server_artifacts()
