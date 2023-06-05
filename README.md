@@ -14,9 +14,9 @@ Nguyễn Trọng Trưởng 20002172
 ___
 ## Cấu trúc các thư mục
 Trong cả thư mục lớn này bao gồm thư mục nhỏ, mỗi thư mục nhỏ lại tương đương việc giải quyết 1 bài toán trong việc phân loại hình ảnh. Các bài toán được chọn bao gồm 3 bài toán: **Nhận diện gương mặt sinh viên**, **Nhận diện cảm xúc**, **Nhận diện người nổi tiếng (Format theo kiểu What you look like?)**. Trong đó:
-- <b>Emotion_Face_Classifier</b>: Đây là thư mục chứa dự án nhận diện cảm xúc người dùng (**Chú ý**: Độ chính xác của mô hình này khá thấp (~ 45%)) 
+- <b>Emotion_Face_Classifier</b>: Đây là thư mục chứa dự án nhận diện cảm xúc người dùng (**Chú ý**: Độ chính xác của mô hình này khá thấp (~ 45%)) (dataset gốc: [click here](https://drive.google.com/drive/folders/1JShtGEyzQSp3Nq6vlx_sn-pDahCrK81e?usp=share_link))
 - <b>Movie_Star_Classification</b>: Đây là thư mục chứa dự án nhận diện người nổi tiếng (**độ chính xác: ~ 80%**)
-- <b>Student_Recognize_Project</b>: Đây là thư mục chứa dự án nhận diện sinh viên (**độ chính xác: ~ 95%**)
+- <b>Student_Recognize_Project</b>: Đây là thư mục chứa dự án nhận diện sinh viên (**độ chính xác: ~ 95%**) (có thể thay đổi model, đọc kỹ phần code trong util.py)
 ___
 ## Công nghệ được sử dụng
 - Ngôn ngữ sử dụng:
