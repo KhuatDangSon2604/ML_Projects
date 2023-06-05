@@ -8,7 +8,7 @@ Nguyễn Thị Thanh 20002164
 
 Trần Thiên Cường 20002109
 
-Luyện Thị Quyên
+Luyện Thị Quyên 20002158
 
 Nguyễn Trọng Trưởng 20002172
 ___
